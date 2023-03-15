@@ -1,0 +1,89 @@
+<head>
+  <meta charset="utf-8" />
+  <title>UMass Lowewll Pilates Class</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script defer src="/__/firebase/9.15.0/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.15.0/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.15.0/firebase-performance-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+  <!--
+    initialize the SDK after all desired features are loaded, set useEmulator to false
+    to avoid connecting the SDK to running emulators.
+  -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+  <script src='index.js'></script>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div id="app">
+    <img
+      src="pilates-umass.png" alt="Pilates">
+
+    <section id="event-details-container">
+      <h1>UMass Lowell Pilates Class</h1>
+
+      <p><i class="material-icons">calendar_today</i> March 04 2023</p>
+      <p><i class="material-icons">location_city</i> North Campus, Umass Lowell</p>
+      <p><i class="material-icons">verified_user</i> Hosted by Vy Tran</p>
+      <!-- ADD THE RSVP BUTTON HERE -->
+      <button id="startRsvp">RSVP</button>
+
+    </section>
+
+    <hr />
+
+    <section id="firebaseui-auth-container"></section>
+
+    <section id="description-container">
+      <h2>It's gonnna be fun!</h2>
+      <p>Join us for a free pilates class and Dunkin donuts!</p>
+      <p>Feel free to invite your friends!</p>
+      <p id="number-attending"></p>
+    </section>
+
+
+    <section style="display: none" id="guestbook-container">
+      <h2>Are you attending?</h2>
+      <button id="rsvp-yes">YES</button>
+      <button id="rsvp-no">NO</button>
+
+      <h2>Discussion</h2>
+
+      <form id="leave-message">
+        <label>Leave a message: </label>
+        <input type="text" id="message">
+        <button type="submit">
+          <i class="material-icons">send</i>
+          <span>SEND</span>
+        </button>
+      </form>
+
+    <section id="guestbook"></section>
+
+    </section>
+
+  </div>
+</body>
